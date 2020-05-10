@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 
 const Index = () => (
-  <StyledDiv>
+  <StyledDiv data-cy="title">
     Frontend template
     <span>by The Neon Project</span>
   </StyledDiv>

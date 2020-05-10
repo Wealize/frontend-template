@@ -120,3 +120,7 @@ typings/
 .dynamodb/
 
 # End of https://www.gitignore.io/api/node,macos
+out
+build
+__tests__/e2e/screenshots
+__tests__/e2e/videos
