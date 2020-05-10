@@ -1,9 +1,8 @@
-import React from "react"
-import App from "next/app"
-import { Reset } from "styled-reset"
+import React from 'react'
+import App from 'next/app'
+import { Reset } from 'styled-reset'
 
-import Global from "../components/Global"
-
+import Global from '../components/Global'
 
 class ExtendedApp extends App {
   public render() {
