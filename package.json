@@ -14,7 +14,10 @@
     "build": "next build",
     "dev": "next",
     "start": "next start",
-    "lint": "eslint './**/*.{js,ts,tsx}'"
+    "lint": "eslint './**/*.{js,ts,tsx}'",
+    "jest": "jest",
+    "jest-with-coverage": "jest --coverage",
+    "jest-collect-coverage": "jest --collectCoverage --coverageReporters=json-summary"
   },
   "dependencies": {
     "next": "^9.1.4",
