@@ -17,7 +17,9 @@
     "lint": "eslint './**/*.{js,ts,tsx}'",
     "jest": "jest",
     "jest-with-coverage": "jest --coverage",
-    "jest-collect-coverage": "jest --collectCoverage --coverageReporters=json-summary"
+    "jest-collect-coverage": "jest --collectCoverage --coverageReporters=json-summary",
+    "cypress-run": "cypress run",
+    "cypress": "start-server-and-test dev http://localhost:3000 cypress-run"
   },
   "dependencies": {
     "next": "^9.1.4",
@@ -32,6 +34,7 @@
     "@types/styled-components": "^4.4.0",
     "@typescript-eslint/eslint-plugin": "^2.31.0",
     "@typescript-eslint/parser": "^2.31.0",
+    "cypress": "^4.5.0",
     "dotenv": "^8.2.0",
     "eslint": "^7.0.0",
     "eslint-config-prettier": "^6.11.0",
