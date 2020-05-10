@@ -21,17 +21,17 @@
     "cypress": "start-server-and-test dev http://localhost:3000 cypress-run"
   },
   "dependencies": {
-    "next": "^9.1.4",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "styled-components": "^4.4.1",
-    "styled-reset": "^4.0.8"
+    "next": "^9.3.6",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.0",
+    "styled-reset": "^4.1.4"
   },
   "devDependencies": {
     "@types/jest": "^25.2.1",
-    "@types/node": "^12.12.14",
-    "@types/react": "^16.9.15",
-    "@types/styled-components": "^4.4.0",
+    "@types/node": "^13.13.5",
+    "@types/react": "^16.9.34",
+    "@types/styled-components": "^5.1.0",
     "@typescript-eslint/eslint-plugin": "^2.31.0",
     "@typescript-eslint/parser": "^2.31.0",
     "babel-plugin-styled-components": "^1.10.7",
@@ -47,9 +47,10 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-standard": "^4.0.1",
-    "jest": "^24.9.0",
-    "ts-jest": "^24.2.0",
-    "tslint": "^5.20.1",
-    "typescript": "^3.7.3"
+    "jest": "^26.0.1",
+    "start-server-and-test": "^1.11.0",
+    "ts-jest": "^25.5.1",
+    "tslint": "^6.1.2",
+    "typescript": "^3.8.3"
   }
 }
