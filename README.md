@@ -1,4 +1,8 @@
-# TEC frontend
+# A template to bootstrap TNP Frontend projects
+
+## Template info, delete after use the template
+
+To start a new project, click on the "Use this template" button.
 
 ## Installation
 
