@@ -24,7 +24,7 @@ jobs:
         run: yarn jest-collect-coverage
 
       - name: Run eslint
-        run: yarn run lint
+        run: yarn lint -f json -o eslint.json
         continue-on-error: true
 
       - name: Danger
