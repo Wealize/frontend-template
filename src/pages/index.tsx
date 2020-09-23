@@ -1,14 +1,12 @@
-import React from "react"
-import styled from "styled-components"
-
+import React from 'react'
+import styled from 'styled-components'
 
 const Index = () => (
   <StyledDiv data-cy="title">
     Frontend template
-    <span>by The Neon Project</span>
+    <span>by Wealize</span>
   </StyledDiv>
 )
-
 
 const StyledDiv = styled.div`
   display: flex;

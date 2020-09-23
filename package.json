@@ -1,14 +1,11 @@
 {
   "name": "frontend-template",
   "version": "1.0.0",
-  "description": "A template to bootstrap TNP frontend projects",
-  "repository": "git@github.com:TheNeonProject/frontend-template.git",
-  "author": "The Neon Project",
+  "description": "A template to bootstrap Wealize frontend projects",
+  "repository": "git@github.com:Wealizedigital/frontend-template.git",
+  "author": "Wealize",
   "license": "MIT",
   "private": true,
-  "engines": {
-    "node": "10"
-  },
   "scripts": {
     "build": "next build",
     "dev": "next",

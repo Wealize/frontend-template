@@ -22,10 +22,10 @@ import './commands'
 // Cypress cannot see or stub these network calls
 // This is a workaround while it is implemented a way to mock fetch natively
 // https://github.com/cypress-io/cypress/issues/95
-Cypress.on('window:before:load', win => {
+Cypress.on('window:before:load', (win) => {
   fetch('https://unpkg.com/unfetch/dist/unfetch.umd.js')
-    .then(stream => stream.text())
-    .then(response => {
+    .then((stream) => stream.text())
+    .then((response) => {
       win.eval(response)
       win.fetch = win.unfetch
     })
