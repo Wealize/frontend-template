@@ -13,7 +13,7 @@ const StyledDiv = styled.div`
   flex-flow: column;
   align-items: center;
   justify-content: center;
-  background-color: deeppink;
+  background-color: #f05f78ff;
   color: white;
   font-family: sans-serif;
   font-size: 32px;
