@@ -2,7 +2,7 @@
   "name": "frontend-template",
   "version": "1.0.0",
   "description": "A template to bootstrap Wealize frontend projects",
-  "repository": "git@github.com:Wealizedigital/frontend-template.git",
+  "repository": "git@github.com:Wealize/frontend-template.git",
   "author": "Wealize",
   "license": "MIT",
   "private": true,
