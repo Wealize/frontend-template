@@ -1,4 +1,4 @@
-# A template to bootstrap TNP Frontend projects
+# A template to bootstrap Wealize Frontend projects
 
 ## Template info, delete after use the template
 
