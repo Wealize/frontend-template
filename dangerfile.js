@@ -88,7 +88,7 @@ if (fs.existsSync('coverage/coverage-summary.json')) {
 
 jiraIssue({
   key: '[PROJECT-JIRA-CODE]',
-  url: 'https://theneonproject.atlassian.net/browse',
+  url: 'https://wealize.atlassian.net/browse',
   emoji: ':paperclip:',
   location: 'title'
 })
