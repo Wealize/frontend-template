@@ -23,11 +23,11 @@ function withClearCache(Component: any) {
             <Button type="primary" onClick={() => emptyCacheStorage()}>Reload</Button>
           }
         >
-          <p>There is a new version of Coloq.io. Please, reload</p>
+          <p>There is a new version of. Please, reload</p>
         </Modal>)}
       </div>
       </React.Fragment>
-    );
+    )
   }
 
   return ClearCacheComponent
