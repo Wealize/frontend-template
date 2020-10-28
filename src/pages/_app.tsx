@@ -2,6 +2,7 @@ import React from 'react'
 import { AppProps } from 'next/app'
 import { Reset } from 'styled-reset'
 
+import withClearCache from '../clearCache'
 import Global from '../components/Global'
 
 const ExtendedApp = (props: AppProps) => {
@@ -16,4 +17,4 @@ const ExtendedApp = (props: AppProps) => {
   )
 }
 
-export default ExtendedApp
+export default withClearCache(ExtendedApp)

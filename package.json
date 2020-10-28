@@ -7,9 +7,11 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "prebuild": "npm run generate-build-meta",
     "build": "next build",
     "dev": "next",
     "start": "next start -p $PORT",
+    "generate-build-meta": "./node_modules/react-clear-cache/bin/cli.js",
     "lint": "eslint './**/*.{js,ts,tsx}'",
     "jest": "jest",
     "jest-with-coverage": "jest --coverage",
