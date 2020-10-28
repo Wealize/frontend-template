@@ -1,3 +1,5 @@
+import 'antd/dist/antd.css'
+
 import React from 'react'
 import { AppProps } from 'next/app'
 import { Reset } from 'styled-reset'
