@@ -46,6 +46,7 @@
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.9.10",
+    "@cypress/react": "^5.9.3",
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
     "@testing-library/cypress": "^8.0.0",
     "@testing-library/dom": "^8.1.0",
@@ -58,6 +59,7 @@
     "cypress": "^8.2.0",
     "eslint": "7.32.0",
     "eslint-config-next": "11.0.1",
+    "istanbul-lib-coverage": "^3.0.0",
     "jest": "^27.0.6",
     "jest-watch-typeahead": "^0.6.4",
     "nyc": "^15.1.0",

@@ -6,7 +6,10 @@ module.exports = {
     "<rootDir>[/\\\\](node_modules|.next)[/\\\\]",
     "<rootDir>/cypress",
   ],
-  transformIgnorePatterns: ["[/\\\\]node_modules[/\\\\].+\\.(ts|tsx)$"],
+  transformIgnorePatterns: [
+    "[/\\\\]node_modules[/\\\\].+\\.(ts|tsx)$",
+    "<rootDir>/cypress",
+  ],
   transform: {
     "^.+\\.(ts|tsx)$": "babel-jest",
   },
