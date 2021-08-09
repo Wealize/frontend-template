@@ -75,7 +75,7 @@ if (!areThereNewTest) {
   warn("Create some tests :rocket:");
 }
 
-if (fs.existsSync("coverage/coverage-summary.json")) {
+if (fs.existsSync(".nyc_output/out.json")) {
   istanbulCoverage({
     customSuccessMessage: "Congrats, coverage is good",
     customFailureMessage: "Coverage is a little low, take a look",

@@ -21,11 +21,10 @@ jobs:
         env:
           NODE_ENV: development
 
-      - name: Increase watchers limit
-        run: echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
-
       - name: Run typescript check and unit tests
         run: yarn jest
 
       - name: Cypress run
         uses: cypress-io/github-action@v2
+        env:
+          NODE_ENV: development
