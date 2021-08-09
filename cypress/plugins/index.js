@@ -9,16 +9,17 @@
 // https://on.cypress.io/plugins-guide
 // ***********************************************************
 
+const browserify = require("@cypress/browserify-preprocessor");
+
 /**
  * @type {Cypress.PluginConfig}
  */
 
 module.exports = (on, config) => {
+  const options = browserify.defaultOptions;
+  options.browserifyOptions.transform[1][1].babelrc = true;
+  options.typescript = require.resolve("typescript");
   require("@cypress/code-coverage/task")(on, config);
-
-  // add other tasks to be registered here
-
-  // IMPORTANT to return the config object
-  // with the any changed environment variables
+  on("file:preprocessor", require("@cypress/code-coverage/use-babelrc"));
   return config;
 };
