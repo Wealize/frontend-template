@@ -22,9 +22,9 @@ jobs:
           NODE_ENV: development
 
       - name: Run typescript check and unit tests
-        run: yarn validate
+        run: yarn jest
 
-      - name: Run end-to-end tests
+      - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
           build: yarn run build
