@@ -25,17 +25,7 @@ jobs:
         run: echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 
       - name: Run typescript check and unit tests
-        run: yarn validate
+        run: yarn jest
 
-      - name: Run end-to-end tests
-        on: [push]
-        jobs:
-          cypress-run:
-            runs-on: ubuntu-20.04
-            steps:
-              - name: Checkout
-                uses: actions/checkout@v2
-                # Install NPM dependencies, cache them correctly
-                # and run all Cypress tests
-              - name: Cypress run
-                uses: cypress-io/github-action@v2
+      - name: Cypress run
+        uses: cypress-io/github-action@v2

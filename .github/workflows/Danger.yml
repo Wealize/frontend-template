@@ -20,8 +20,8 @@ jobs:
       - name: Install danger code-coverage and jira-danger
         run: yarn add danger danger-plugin-istanbul-coverage danger-plugin-jira-issue --dev
 
-      - name: Run code coverage summary
-        run: yarn test
+      - name: Run jest and collect coverage
+        run: yarn jest
 
       - name: Run eslint
         run: yarn lint
