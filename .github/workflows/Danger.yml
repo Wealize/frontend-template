@@ -7,12 +7,12 @@ jobs:
     runs-on: 'ubuntu-latest'
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
 
       - name: Setup Node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
-          node-version: '10.x'
+          node-version: '14.x'
 
       - name: Install dependencies
         run: yarn install --dev
@@ -20,11 +20,11 @@ jobs:
       - name: Install danger code-coverage and jira-danger
         run: yarn add danger danger-plugin-istanbul-coverage danger-plugin-jira-issue --dev
 
-      - name: Run jest and collect coverage
-        run: yarn jest-collect-coverage
+      - name: Run code coverage summary
+        run: yarn test
 
       - name: Run eslint
-        run: yarn lint -f json -o eslint.json
+        run: yarn lint
         continue-on-error: true
 
       - name: Danger

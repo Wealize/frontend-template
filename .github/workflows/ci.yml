@@ -9,12 +9,12 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
 
       - name: Setup Node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
-          node-version: '10.x'
+          node-version: "14.x"
 
       - name: Install dependencies
         run: yarn install
@@ -24,23 +24,18 @@ jobs:
       - name: Increase watchers limit
         run: echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 
-      - name: Run unit tests
-        run: yarn jest
+      - name: Run typescript check and unit tests
+        run: yarn validate
 
-      - name: Run integration tests
-        uses: cypress-io/github-action@v1
-        with:
-          install: false
-          browser: electron
-          headless: true
-          start: yarn run dev
-          wait-on: 'http://localhost:3000'
-
-      - name: Build app
-        run: yarn build
-
-      - uses: actions/upload-artifact@v1
-        if: failure()
-        with:
-          name: cypress-videos
-          path: __tests__/e2e/videos
+      - name: Run end-to-end tests
+        on: [push]
+        jobs:
+          cypress-run:
+            runs-on: ubuntu-20.04
+            steps:
+              - name: Checkout
+                uses: actions/checkout@v2
+                # Install NPM dependencies, cache them correctly
+                # and run all Cypress tests
+              - name: Cypress run
+                uses: cypress-io/github-action@v2

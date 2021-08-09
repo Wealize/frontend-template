@@ -1,22 +1,7 @@
-import 'antd/dist/antd.css'
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
 
-import React from 'react'
-import { AppProps } from 'next/app'
-import { Reset } from 'styled-reset'
-
-import withClearCache from '../clearCache'
-import Global from '../components/Global'
-
-const ExtendedApp = (props: AppProps) => {
-  const { Component, pageProps } = props
-
-  return (
-    <React.Fragment>
-      <Reset />
-      <Global />
-      <Component {...pageProps} />
-    </React.Fragment>
-  )
+function MyApp({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
 }
-
-export default withClearCache(ExtendedApp)
+export default MyApp;
