@@ -20,5 +20,5 @@ module.exports = {
   setupFilesAfterEnv: ["@testing-library/jest-dom/extend-expect"],
   collectCoverage: true,
   coverageDirectory: "jest-coverage",
-  coverageReporters: ["json"],
+  coverageReporters: ["json", "lcov"],
 };

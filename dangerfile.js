@@ -75,15 +75,16 @@ if (!areThereNewTest) {
   warn("Create some tests :rocket:");
 }
 
-if (fs.existsSync(".nyc_output/out.json")) {
-  istanbulCoverage({
-    customSuccessMessage: "Congrats, coverage is good",
-    customFailureMessage: "Coverage is a little low, take a look",
-    coveragePath: ".nyc_output/out.json",
-    reportFileSet: "createdOrModified",
-    reportMode: "warn",
-  });
-}
+istanbulCoverage({
+  customSuccessMessage: "Congrats, coverage is good",
+  customFailureMessage: "Coverage is a little low, take a look",
+  coveragePaths: [
+    { path: "./cypress-coverage/lcov.info", type: "lcov" },
+    { path: "./jest-coverage/lcov.info", type: "lcov" },
+  ],
+  reportFileSet: "createdOrModified",
+  reportMode: "warn",
+});
 
 jiraIssue({
   // Please, write your corresponding project key from Jira.
