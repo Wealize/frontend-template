@@ -1,10 +1,10 @@
 {
-    "compilerOptions": {
-      "isolatedModules": false,
-      "target": "es5",
-      "lib": ["es5", "dom"],
-      "noEmit": true,
-      "types": ["cypress", "@testing-library/cypress"]
-    },
-    "include": ["../node_modules/cypress", "./**/*.ts"]
-  }
+  "compilerOptions": {
+    "isolatedModules": false,
+    "target": "es5",
+    "lib": ["es5", "dom"],
+    "noEmit": true,
+    "types": ["cypress", "@testing-library/cypress"]
+  },
+  "include": ["../node_modules/cypress", "./**/*.ts"]
+}

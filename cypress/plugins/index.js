@@ -50,5 +50,3 @@ module.exports = (on, config) => {
   codeCoverageTask(on, config);
   return config;
 };
-
-
