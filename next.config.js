@@ -2,8 +2,6 @@ if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
 }
 
-const nextConfig = {
-  env: {},
+module.exports = {
+  reactStrictMode: true,
 };
-
-module.exports = nextConfig;
