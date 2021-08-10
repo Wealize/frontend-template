@@ -86,7 +86,8 @@ if (fs.existsSync(".nyc_output/out.json")) {
 }
 
 jiraIssue({
-  key: "[PROJECT-JIRA-CODE]",
+  // Please, write your corresponding project key from Jira.
+  key: "CQIO", // "CQIO" is an example key
   url: "https://wealize.atlassian.net/browse",
   emoji: ":paperclip:",
   location: "title",
