@@ -1,9 +1,16 @@
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config()
-}
+const { PHASE_DEVELOPMENT_SERVER } = require("next/constants");
 
-const nextConfig = {
-  env: {}
-}
+module.exports = (phase, { defaultConfig }) => {
+  if (phase === PHASE_DEVELOPMENT_SERVER) {
+    return {
+      /* development only config options here */
 
-module.exports = nextConfig
+      // React's Strict Mode is a development mode only feature for highlighting potential problems in an application
+      reactStrictMode: true,
+    };
+  }
+
+  return {
+    /* config options for all phases except development here */
+  };
+};
