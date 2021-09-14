@@ -32,9 +32,13 @@
     "validate": "yarn type-check && yarn test"
   },
   "dependencies": {
-    "next": "11.0.1",
+    "next": "11.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2"
+  },
+  "resolutions": {
+    "path-parse": "^1.0.7",
+    "hosted-git-info": "^4.0.2"
   },
   "nyc": {
     "extends": "./.nycrc.json",
@@ -46,29 +50,29 @@
   },
   "devDependencies": {
     "@cypress/code-coverage": "^3.9.10",
-    "@cypress/react": "^5.9.3",
+    "@cypress/react": "^5.9.4",
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
-    "@testing-library/cypress": "^8.0.0",
-    "@testing-library/dom": "^8.1.0",
+    "@testing-library/cypress": "^8.0.1",
+    "@testing-library/dom": "^8.2.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
-    "@types/jest": "^26.0.24",
-    "@types/node": "^16.4.13",
-    "@types/react": "17.0.16",
-    "cypress": "^8.2.0",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.10",
+    "@types/react": "17.0.19",
+    "cypress": "^8.3.1",
     "danger": "^10.6.6",
     "danger-plugin-istanbul-coverage": "^1.6.2",
     "danger-plugin-jira-issue": "^1.4.1",
     "eslint": "7.32.0",
-    "eslint-config-next": "11.0.1",
+    "eslint-config-next": "11.1.2",
     "istanbul-lib-coverage": "^3.0.0",
-    "jest": "^27.0.6",
+    "jest": "^27.1.0",
     "jest-watch-typeahead": "^0.6.4",
     "nyc": "^15.1.0",
     "prettier": "^2.3.2",
     "source-map-support": "^0.5.19",
-    "start-server-and-test": "^1.13.1",
-    "ts-node": "^10.2.0",
-    "typescript": "4.3.5"
+    "start-server-and-test": "^1.14.0",
+    "ts-node": "^10.2.1",
+    "typescript": "4.4.2"
   }
 }
