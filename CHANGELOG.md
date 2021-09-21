@@ -8,4 +8,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 - [Example](https://wealize.atlassian.net/browse/CQIO-000)
+- [Example](https://wealize.atlassian.net/browse/CQIO-000)
 - [Title example](https://wealize.atlassian.net/browse/CQIO-000)

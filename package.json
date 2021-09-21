@@ -38,7 +38,8 @@
   },
   "resolutions": {
     "path-parse": "^1.0.7",
-    "hosted-git-info": "^4.0.2"
+    "hosted-git-info": "^4.0.2",
+    "axios": "^0.21.4"
   },
   "nyc": {
     "extends": "./.nycrc.json",
