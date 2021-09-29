@@ -9,6 +9,7 @@ import { Provider as StyletronProvider } from 'styletron-react';
 import { styletron } from '../lib/styletron';
 import type { DocumentContext } from "next/document";
 import type { Key } from "react";
+
 class MyDocument extends Document {
   static async getInitialProps(context: DocumentContext) {
     const renderPage = () =>

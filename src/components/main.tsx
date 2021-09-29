@@ -2,6 +2,7 @@ import { Card, StyledBody } from 'baseui/card';
 import { Display2 } from 'baseui/typography';
 import { H3 } from 'baseui/typography';
 import { useStyletron } from 'baseui';
+
 const Main = (): JSX.Element => {
   return (
     <Inner>
