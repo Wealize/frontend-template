@@ -29,8 +29,7 @@ jobs:
 
       - name: Run all tests and collect coverage
         run: yarn test
-        env:
-          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+
 
       - name: Danger
         run: yarn danger ci

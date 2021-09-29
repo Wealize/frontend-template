@@ -16,16 +16,6 @@ Install dependencies to your project by running the following command:
 yarn install
 ```
 
-To run your project locally, add the following file (ignored by .gitignore) to your local repository:
-
- **_.env_**
-
-```
-SENTRY_AUTH_TOKEN=xxxxxxxxxxxxxxxxx
-```
-**SENTRY_AUTH_TOKEN** - you can find or create your token in [Sentry Settings](https://sentry.io/settings/account/api/auth-tokens/)
-
-
 
 To run your application in the localhost, please use this command:
 

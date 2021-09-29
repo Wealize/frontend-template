@@ -1,17 +1,14 @@
-import Script from 'next/script';
-import { BaseProvider } from 'baseui';
-import { pageview } from '../lib/gtm';
-import { Provider as StyletronProvider } from 'styletron-react';
-import { styletron } from '../lib/styletron';
-import { theme } from '../helpers/themeHelper';
-import { useEffect } from 'react';
-import { useRouter } from 'next/dist/client/router';
+import Script from "next/script";
+import { BaseProvider } from "baseui";
+import { pageview } from "../lib/gtm";
+import { Provider as StyletronProvider } from "styletron-react";
+import { styletron } from "../lib/styletron";
+import { theme } from "../helpers/themeHelper";
+import { useEffect } from "react";
+import { useRouter } from "next/dist/client/router";
 import type { AppProps } from "next/app";
 
-interface Props extends AppProps {
-  err: (Error & { statusCode?: number | undefined }) | null | undefined;
-}
-function MyApp({ Component, pageProps, err }: Props) {
+function MyApp({ Component, pageProps }: AppProps) {
   // Watch for page changes needed for Google Tag Manager.
   const router = useRouter();
   useEffect(() => {
@@ -33,7 +30,7 @@ function MyApp({ Component, pageProps, err }: Props) {
       </Script>
       <StyletronProvider value={styletron}>
         <BaseProvider theme={theme}>
-          <Component {...pageProps} err={err} />
+          <Component {...pageProps} />
         </BaseProvider>
       </StyletronProvider>
     </>
