@@ -1,16 +1,39 @@
-const { PHASE_DEVELOPMENT_SERVER } = require("next/constants");
+const {
+  PHASE_DEVELOPMENT_SERVER,
+  PHASE_PRODUCTION_BUILD,
+} = require("next/constants");
+const { withSentryConfig } = require("@sentry/nextjs");
 
-module.exports = (phase, { defaultConfig }) => {
-  if (phase === PHASE_DEVELOPMENT_SERVER) {
-    return {
-      /* development only config options here */
+const moduleExports = (phase) => {
+  const isDev = phase === PHASE_DEVELOPMENT_SERVER;
+  const isProd = phase === PHASE_PRODUCTION_BUILD;
 
-      // React's Strict Mode is a development mode only feature for highlighting potential problems in an application
-      reactStrictMode: true,
-    };
-  }
+  console.log(`isDev:${isDev}  isProd:${isProd}`);
+
+  const locale = {
+    i18n: {
+      locales: ["en-US", "es"],
+      defaultLocale: "en-US",
+    },
+  };
+
+  const styletron = {
+    webpack: function (config) {
+      config.externals = config.externals || {};
+      config.externals["styletron-server"] = "styletron-server";
+      return config;
+    },
+  };
 
   return {
-    /* config options for all phases except development here */
+    locale,
+    styletron,
   };
 };
+
+const SentryWebpackPluginOptions = {
+  silent: true, // Suppresses all logs
+  // For all available options, see:
+  // https://github.com/getsentry/sentry-webpack-plugin#options.
+};
+module.exports = withSentryConfig(moduleExports(), SentryWebpackPluginOptions);

@@ -1,5 +1,8 @@
 {
   "baseUrl": "http://localhost:3000",
   "integrationFolder": "cypress/e2e",
-  "video": false
+  "pluginsFile": "cypress/plugins/index.ts",
+  "supportFile": "cypress/support/index.ts",
+  "video": false,
+  "chromeWebSecurity": false
 }
