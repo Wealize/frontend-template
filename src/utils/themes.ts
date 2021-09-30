@@ -1,14 +1,16 @@
-// That is an example of theme definition.  Delete it and add yours.
+import { pink } from ".";
+import {colors} from 'baseui/tokens';
 
-import { blue, neutral } from "./colors";
-import { primaryFont } from "./typography";
+// Custom colors that replace BaseWeb default colors.
+// BaseWeb types https://github.com/uber/baseweb/blob/master/src/theme.ts
 
-export const defaultTheme = {
-  primaryColor: blue[300],
-  primaryHoverColor: blue[200],
-  primaryActiveColor: blue[100],
-  textColorOnPrimary: neutral[100],
-  textColor: neutral[600],
-  textColorInverted: neutral[100],
-  primaryFont: primaryFont,
+export const primitives = {
+  primaryA: colors.white,
+  primaryB: pink[500],
+};
+
+export const overrides = {
+  colors: {
+    backgroundPrimary: primitives.primaryB,
+  },
 };

@@ -1,3 +1,4 @@
+/* istanbul ignore file */
+
 export * from "./colors";
-export * from "./typography";
 export * from "./themes";
