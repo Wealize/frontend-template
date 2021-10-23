@@ -1,6 +1,4 @@
 import { Client, Server } from 'styletron-engine-atomic';
-/* istanbul ignore file */
-
 import type { hydrateType } from "styletron-engine-atomic";
 
 const getHydrateClass = () =>

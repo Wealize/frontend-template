@@ -1,6 +1,6 @@
-import { danger, warn } from "danger";
-import { istanbulCoverage } from "danger-plugin-istanbul-coverage"
 import jiraIssue from "danger-plugin-jira-issue";
+import { danger, warn } from "danger";
+import { istanbulCoverage } from "danger-plugin-istanbul-coverage";
 
 jiraIssue({
   key: "CQIO",
@@ -9,13 +9,15 @@ jiraIssue({
   location: "title",
 });
 
-
 istanbulCoverage({
   customSuccessMessage: "Congrats, coverage is good",
   customFailureMessage: "Coverage is a little low, take a look",
   entrySortMethod: "least-coverage",
   numberOfEntries: 20,
-  coveragePath: { path: "./coverage/lcov.info", type: "lcov"},
+  coveragePath: {
+    path: "./coverage/coverage-summary.json",
+    type: "json-summary",
+  },
   reportFileSet: "all",
   reportMode: "warn",
 
@@ -25,9 +27,8 @@ istanbulCoverage({
     branches: 100,
     functions: 100,
     lines: 100,
-  }
-})
-
+  },
+});
 
 if (danger.github.pr.body.length < 10) {
   warn("Please include a description of your PR changes.");
@@ -42,4 +43,3 @@ const isTrivial = description.includes("#trivial");
 if (!hasChangelog && !isTrivial) {
   warn("Please add a changelog entry for your changes.");
 }
-

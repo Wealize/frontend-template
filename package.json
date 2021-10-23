@@ -28,8 +28,7 @@
     "test:watch": "jest --watch",
     "test": "jest && yarn test:e2e:run",
     "posttest": "yarn test:coverage",
-    "report:combined": "yarn nyc report --reporter lcov --reporter text --report-dir coverage",
-    "test:coverage": "node ./scripts/mergeCoverage.js && yarn report:combined",
+    "test:coverage": "node ./scripts/mergeCoverage.js",
     "validate": "yarn type-check && yarn test",
     "postvalidate": "node ./scripts/clean.js"
   },
@@ -49,10 +48,19 @@
   },
   "nyc": {
     "extends": "./.nycrc.json",
+    "all": true,
+    "include": [
+      "**/src/**/*.ts",
+      "**/src/**/*.tsx"
+    ],
+    "exclude": [
+      "**/__tests__/**",
+      "**/src/**/index.ts",
+      "**/src/pages/_document.tsx"
+    ],
     "report-dir": "cypress-coverage",
     "reporter": [
-      "json",
-      "lcov"
+      "json"
     ]
   },
   "devDependencies": {
