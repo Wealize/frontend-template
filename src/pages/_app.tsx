@@ -1,8 +1,8 @@
 import Script from "next/script";
 import { BaseProvider } from "baseui";
-import { pageview } from "../lib/gtm";
+import { pageview } from "../../lib/gtm";
 import { Provider as StyletronProvider } from "styletron-react";
-import { styletron } from "../lib/styletron";
+import { styletron } from "../../lib/styletron";
 import { theme } from "../helpers/themeHelper";
 import { useEffect } from "react";
 import { useRouter } from "next/dist/client/router";

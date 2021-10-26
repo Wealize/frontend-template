@@ -29,7 +29,8 @@ jobs:
 
       - name: Run all tests and collect coverage
         run: yarn test
-
+        env:
+          NODE_ENV: test
 
       - name: Danger
         run: yarn danger ci

@@ -31,6 +31,8 @@ jobs:
         env:
           NODE_ENV: development
 
-
-      - name: Run all tests and collect coverage
+      - name: Run all tests
         run: yarn test
+        env:
+          NODE_ENV: test
+
