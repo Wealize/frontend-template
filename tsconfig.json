@@ -19,7 +19,15 @@
     "noUnusedParameters": true,
     "alwaysStrict": true,
     "noFallthroughCasesInSwitch": true,
-    "types": ["cypress", "@testing-library/cypress"]
+    "types": ["cypress", "@testing-library/cypress"],
+    "importHelpers": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/utils": ["src/utils/"],
+      "@/components/*": ["src/components/*"],
+      "@/styles/*": ["src/styles/*"],
+      "@/interface/*": ["src/interface/*"]
+    } // This is an alias to shorten imports
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": [
