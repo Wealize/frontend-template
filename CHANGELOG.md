@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-- [Title example](https://wealize.atlassian.net/browse/CQIO-000)
+- [Title example](https://wealize.atlassian.net/browse/SSG21036-000)
 
 ## [v2021-10-23]
 
